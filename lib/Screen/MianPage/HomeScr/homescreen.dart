@@ -5,7 +5,6 @@ class Homescreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     var arrContent = [
       {
         'img':
@@ -51,7 +50,6 @@ class Homescreen extends StatelessWidget {
 
     ScrollController scrollController = ScrollController();
 
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 88,
@@ -77,7 +75,7 @@ class Homescreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
-                controller:  scrollController,
+                controller: scrollController,
                 itemCount: arrContent.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
@@ -101,7 +99,8 @@ class Homescreen extends StatelessWidget {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(3.0), // Adjust border thickness
+                            padding: const EdgeInsets.all(
+                                3.0), // Adjust border thickness
                             child: CircleAvatar(
                               radius: 30,
                               backgroundImage: NetworkImage(
@@ -110,21 +109,21 @@ class Homescreen extends StatelessWidget {
                             ),
                           ), // Properly closed the Container's child
                         ),
-                        const SizedBox(height: 5), // Spacing between image and text
+                        const SizedBox(
+                            height: 5), // Spacing between image and text
                         Text(
                           arrContent[index]["name"].toString(),
                           style: const TextStyle(fontSize: 12),
                         ),
                       ],
-                    )
-
+                    ),
                   );
                 },
               ),
             ),
           ),
         ],
-      )
+      ),
     );
   }
 }
