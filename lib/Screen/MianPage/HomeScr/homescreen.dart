@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:instagram_clone/Widgets/ui_helper.dart';
 
 class Homescreen extends StatelessWidget {
   Homescreen({super.key});
@@ -124,10 +126,42 @@ class Homescreen extends StatelessWidget {
             ),
           ),
           Container(
-            height: 56,
+            height: 375,
             width: 375,
             color: Colors.black26,
-            child: Lis,
+            child: ListTile(
+              leading: Padding(
+                padding: const EdgeInsets.all(3),
+                child: UiHelper.customImages(imgurl: 'myprofile.png'),
+              ),
+              title: Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Baseline(
+                    baseline: 14, // Set baseline to align with text
+                    baselineType: TextBaseline.alphabetic,
+                    child: Text(
+                      "Fazal Hamza Khan",
+                      style: TextStyle(
+                        color: Color(0XFFF9F9F9),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+            SizedBox(width: 5,),
+            Baseline(
+              baseline: 10, // Match the text's baseline
+              baselineType: TextBaseline.alphabetic,
+              child: Icon(
+                Icons.verified,
+                color: Colors.blue,
+                size: 12,
+              ),)
+                ],
+              ),
+              subtitle: Text("Pakistan",style: TextStyle(fontWeight: FontWeight.w400,color: Color(0XFFF9F9F9),fontSize: 12),),
+            ),
           )
         ],
       ),
