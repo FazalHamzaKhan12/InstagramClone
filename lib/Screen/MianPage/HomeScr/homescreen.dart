@@ -70,6 +70,7 @@ class Homescreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+
           SizedBox(
             height: 120, // Adjust height to fit image and text
             child: Padding(
@@ -122,6 +123,12 @@ class Homescreen extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            height: 56,
+            width: 375,
+            color: Colors.black26,
+            child: Lis,
+          )
         ],
       ),
     );
