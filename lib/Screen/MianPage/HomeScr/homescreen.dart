@@ -10,42 +10,42 @@ class Homescreen extends StatelessWidget {
     var arrContent = [
       {
         'img':
-            "https://lifetouch.com/wp-content/uploads/2018/06/Underclass_girlwithbluebg.jpg",
+        "https://lifetouch.com/wp-content/uploads/2018/06/Underclass_girlwithbluebg.jpg",
         'name': "Your Story",
       },
       {
         'img':
-            "https://i.pinimg.com/originals/44/76/c1/4476c13d6fd11b568b6aaba94e00e8a9.jpg",
+        "https://i.pinimg.com/originals/44/76/c1/4476c13d6fd11b568b6aaba94e00e8a9.jpg",
         'name': "Alex",
       },
       {
         'img':
-            "https://i.pinimg.com/originals/73/ae/d0/73aed05142df5571e7682b824293a1a3.jpg",
+        "https://i.pinimg.com/originals/73/ae/d0/73aed05142df5571e7682b824293a1a3.jpg",
         'name': "Boby",
       },
       {
         'img':
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFL2kEkh7iC6rTsvcSrQ1gr2GUZw0mJYl59oZgNczsnCRKNC8rCXwTTJGlZAJ97XsH1F0&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFL2kEkh7iC6rTsvcSrQ1gr2GUZw0mJYl59oZgNczsnCRKNC8rCXwTTJGlZAJ97XsH1F0&usqp=CAU",
         'name': "Albert",
       },
       {
         'img':
-            "https://i.pinimg.com/236x/a2/e8/b5/a2e8b5b2bdd38eddd80bc8a98f9f89ff.jpg",
+        "https://i.pinimg.com/236x/a2/e8/b5/a2e8b5b2bdd38eddd80bc8a98f9f89ff.jpg",
         'name': "Micheal",
       },
       {
         'img':
-            "https://i.pinimg.com/236x/29/99/b5/2999b55f1957442bdf9bbe8aad00c9e2.jpg",
+        "https://i.pinimg.com/236x/29/99/b5/2999b55f1957442bdf9bbe8aad00c9e2.jpg",
         'name': "Roman",
       },
       {
         'img':
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkRGXT5P5qndaw99horJHlm71Sjv1ecGkKHeb4dvD16w9NiYS1i8ILckN_IJvyQAQTE4&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkRGXT5P5qndaw99horJHlm71Sjv1ecGkKHeb4dvD16w9NiYS1i8ILckN_IJvyQAQTE4&usqp=CAU",
         'name': "Hanan",
       },
       {
         'img':
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIdO37rKs9AjYURrgtBN97Jgorld66BH9eYgf4cgtT5i2uzyfZp6AI7BrECA7nEQ9Esso&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIdO37rKs9AjYURrgtBN97Jgorld66BH9eYgf4cgtT5i2uzyfZp6AI7BrECA7nEQ9Esso&usqp=CAU",
         'name': "Ibrhaim",
       },
     ];
@@ -72,7 +72,6 @@ class Homescreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-
           SizedBox(
             height: 120, // Adjust height to fit image and text
             child: Padding(
@@ -126,9 +125,9 @@ class Homescreen extends StatelessWidget {
             ),
           ),
           Container(
-            height: 375,
-            width: 375,
-            color: Colors.black26,
+            height: 70,
+            width: double.infinity,
+            color: Colors.black12,
             child: ListTile(
               leading: Padding(
                 padding: const EdgeInsets.all(3),
@@ -149,20 +148,65 @@ class Homescreen extends StatelessWidget {
                       ),
                     ),
                   ),
-            SizedBox(width: 5,),
-            Baseline(
-              baseline: 10, // Match the text's baseline
-              baselineType: TextBaseline.alphabetic,
-              child: Icon(
-                Icons.verified,
-                color: Colors.blue,
-                size: 12,
-              ),)
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Baseline(
+                    baseline: 10, // Match the text's baseline
+                    baselineType: TextBaseline.alphabetic,
+                    child: Icon(
+                      Icons.verified,
+                      color: Colors.blue,
+                      size: 12,
+                    ),
+                  )
                 ],
               ),
-              subtitle: Text("Pakistan",style: TextStyle(fontWeight: FontWeight.w400,color: Color(0XFFF9F9F9),fontSize: 12),),
+              subtitle: Text(
+                "Pakistan",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Color(0XFFF9F9F9),
+                    fontSize: 12),
+              ),
+              trailing: UiHelper.customImages(imgurl: "More Icon.png"),
             ),
-          )
+          ),
+          Container(
+            clipBehavior: Clip.antiAlias,
+            height: 300,
+            width: double.infinity,
+            decoration: BoxDecoration(),
+            child: Image.network(
+                'https://awaragardi.pk/wp-content/uploads/2023/12/6-best-places-visit-things-to-do-islamabad-pakistan-main-image-hd-op.webp'),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              UiHelper.customImages(imgurl: "Like.png"),
+              SizedBox(
+                width: 15,
+              ),
+              UiHelper.customImages(imgurl: "Comment.png"),
+              SizedBox(
+                width: 15,
+              ),
+              UiHelper.customImages(imgurl: "Messanger.png"),
+              SizedBox(
+                width: 250,
+              ),
+              UiHelper.customImages(imgurl: "Save.png"),
+            ],
+          ),
+          SizedBox(
+            height: 15,
+          ),
         ],
       ),
     );

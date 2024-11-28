@@ -75,6 +75,12 @@ flutter:
    - assets/images/Instagram Logo (1).png
    - assets/images/IGTV.png
    - assets/images/myprofile.png
+   - assets/images/More Icon.png
+   - assets/images/Islambad.jpg
+   - assets/images/Like.png
+   - assets/images/Comment.png
+   - assets/images/Messanger.png
+   - assets/images/Save.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
