@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/Widgets/ui_helper.dart';
+import 'package:instagram_clone/Message Screen/messagescr.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -50,12 +51,20 @@ class Homescreen extends StatelessWidget {
         leading: Image.asset("assets/images/Camicon.png"),
         title: Image.asset("assets/images/Instagram Logo (1).png"),
         centerTitle: true,
-        actions: const [
+        actions:  [
           Icon(Icons.add),
           SizedBox(
             width: 20,
           ),
-          Icon(Icons.messenger),
+          IconButton(
+            icon: Icon(Icons.messenger),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MessageScreen()),
+              );
+            },
+          ),
           SizedBox(
             width: 15,
           ),
