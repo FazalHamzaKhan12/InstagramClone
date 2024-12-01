@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/Screen/MianPage/ProfileScr/TabScreens/postproflie.dart';
+import 'package:instagram_clone/Screen/MianPage/ProfileScr/TabScreens/tabscreen.dart';
 import 'package:instagram_clone/Widgets/ui_helper.dart';
 
 class Profilescreen extends StatelessWidget {
@@ -308,6 +310,12 @@ class Profilescreen extends StatelessWidget {
                 ),
               ),
             ),
+            Expanded(
+              child: TabBarView(children: [
+                Tabscreen(),
+                Postproflie(),
+              ]),
+            )
           ],
         ),
       ),
