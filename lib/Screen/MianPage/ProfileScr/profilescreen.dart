@@ -247,8 +247,19 @@ class Profilescreen extends StatelessWidget {
                   ),
                 ),
               ),
+              ],
+          ),
+          SizedBox(height: 5,),
+          Row(
+            children: [
+              SizedBox(width: 46,),
+              Text("New",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
+              SizedBox(width: 76,),
+              Text("Pic",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
+              SizedBox(width: 58,),
+              Text("Chappal",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
             ],
-          )
+          ),
         ],
       ),
     );

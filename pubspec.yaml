@@ -83,6 +83,8 @@ flutter:
    - assets/images/Save.png
    - assets/images/Myf.jpg
    - assets/images/1000025770.jpg
+   - assets/images/Grid Icon.png
+   - assets/images/Tags Icon.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
