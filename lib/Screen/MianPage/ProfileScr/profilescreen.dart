@@ -8,44 +8,46 @@ class Profilescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0XFF121212),
+      appBar: AppBar(
         backgroundColor: Color(0XFF121212),
-        appBar: AppBar(
-          backgroundColor: Color(0XFF121212),
-          centerTitle: true,
-          leading: Icon(
-            CupertinoIcons.news,
-            size: 1,
-          ),
-          title: Row(
-            children: [
-              SizedBox(
-                width: 67,
-              ),
-              Icon(
-                CupertinoIcons.padlock_solid,
-                size: 18,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                width: 2,
-              ),
-              Text(
-                "Fazal_Hamza",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: Icon(
-                CupertinoIcons.line_horizontal_3,
-                size: 26,
-              ),
-            )
+        centerTitle: true,
+        leading: Icon(
+          CupertinoIcons.news,
+          size: 1,
+        ),
+        title: Row(
+          children: [
+            SizedBox(
+              width: 67,
+            ),
+            Icon(
+              CupertinoIcons.padlock_solid,
+              size: 18,
+              color: Colors.blue,
+            ),
+            SizedBox(
+              width: 2,
+            ),
+            Text(
+              "Fazal_Hamza",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
           ],
         ),
-        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Icon(
+              CupertinoIcons.line_horizontal_3,
+              size: 26,
+            ),
+          )
+        ],
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -158,25 +160,97 @@ class Profilescreen extends StatelessWidget {
             height: 20,
           ),
           Center(
-              child: Container(
-            height: 40,
-            width: 350,
-            decoration: BoxDecoration(
-              border: Border.all(
+            child: Container(
+              height: 40,
+              width: 350,
+              decoration: BoxDecoration(
+                border: Border.all(
                   color: Colors.grey, // Border color
                   width: 1.0,
+                ),
+                color: Colors.black, // Move color inside BoxDecoration
+                borderRadius:
+                    BorderRadius.circular(10), // Correct usage of borderRadius
               ),
-              color: Colors.black, // Move color inside BoxDecoration
-              borderRadius:
-                  BorderRadius.circular(10), // Correct usage of borderRadius
-            ),
-            child: Center(
-              child: Text(
-                'Edit Profile',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 14), // Optional text styling
+              child: Center(
+                child: Text(
+                  'Edit Profile',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14), // Optional text styling
+                ),
               ),
             ),
-          ))
-        ]));
+          ),
+          SizedBox(height: 25,),
+          Row(
+            children: [
+              SizedBox(width: 25,),
+              Container(
+                width: 80, // Diameter of the CircleAvatar (2 * radius + border width)
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.yellow,
+                    width: 1.0,
+                  ),
+                ),
+                child: CircleAvatar(
+                    backgroundColor: Color(0XFF121212),
+                  child: Icon(CupertinoIcons.plus),
+                ),
+              ),
+              SizedBox(width: 25,),
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.pinkAccent
+                  ),
+                ),
+                child: CircleAvatar(
+                  child: ClipOval(
+                    child: Image.asset(
+                      "assets/images/Myf.jpg", // Or use NetworkImage if the image is from the web.
+                      fit: BoxFit
+                          .cover, // Ensures the image covers the circle without stretching.
+                      width: 80, // Double the radius for a perfect fit.
+                      height: 80, // Double the radius for a perfect fit.
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 25,),
+              Container(
+                width: 80, height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.green,
+                    width: 1,
+                  )
+                ),
+                child: CircleAvatar(
+                  child: ClipOval(
+                    child: Image.asset(
+                      "assets/images/1000025770.jpg", // Or use NetworkImage if the image is from the web.
+                      fit: BoxFit
+                          .cover, // Ensures the image covers the circle without stretching.
+                      width: 80, // Double the radius for a perfect fit.
+                      height: 80, // Double the radius for a perfect fit.
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }

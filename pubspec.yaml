@@ -81,6 +81,8 @@ flutter:
    - assets/images/Comment.png
    - assets/images/Messanger.png
    - assets/images/Save.png
+   - assets/images/Myf.jpg
+   - assets/images/1000025770.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
