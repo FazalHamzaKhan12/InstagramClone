@@ -86,6 +86,12 @@ flutter:
    - assets/images/1000025770.jpg
    - assets/images/Grid Icon.png
    - assets/images/Tags Icon.png
+   - assets/images/Oval (5).png
+   - assets/images/Oval (4).png
+   - assets/images/Oval (3).png
+   - assets/images/Oval (8).png
+   - assets/images/Rectangle.png
+   - assets/images/Rectangle (2).png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
