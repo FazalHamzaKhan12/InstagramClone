@@ -7,6 +7,7 @@ class YouTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           // Fol;ow Requests Header
@@ -29,13 +30,13 @@ class YouTab extends StatelessWidget {
             color: Colors.black,
             child: Column(
               children: [
-                const SizedBox(height: 5),
+                const SizedBox(height: 4),
                 Row(
                   children: const [
                     SizedBox(width: 20),
                     Text(
                       "New",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -46,14 +47,14 @@ class YouTab extends StatelessWidget {
                     "design123 liked your photo.",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 17,
+                      fontSize: 14,
                     ),
                   ),
                   subtitle: const Text(
                     "10min ago",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 14,
+                      fontSize: 10,
                     ),
                   ),
                   trailing: UiHelper.customImages(imgurl: "Rectangle.png"),
@@ -75,7 +76,7 @@ class YouTab extends StatelessWidget {
                     SizedBox(width: 20),
                     Text(
                       "Today",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -90,10 +91,10 @@ class YouTab extends StatelessWidget {
                     ),
                   ),
                   subtitle: const Text(
-                    "1Day ago",
+                    "1d ago",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 14,
+                      fontSize: 10,
                     ),
                   ),
                   trailing: UiHelper.customImages(imgurl: "Rectangle.png"),
@@ -113,7 +114,7 @@ class YouTab extends StatelessWidget {
                     SizedBox(width: 20),
                     Text(
                       "This Week",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -131,7 +132,7 @@ class YouTab extends StatelessWidget {
                     "2d ago",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 14,
+                      fontSize: 10,
                     ),
                   ),
                   trailing: UiHelper.customImages(imgurl: "Rectangle (2).png"),
@@ -139,6 +140,116 @@ class YouTab extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            height: 106,
+            width: double.infinity,
+            color: Colors.black,
+            child: Column(
+              children: [
+                const SizedBox(height: 5),
+                Row(
+                  children: const [
+                    SizedBox(width: 20),
+
+                  ],
+                ),
+                // Notification ListTile
+                ListTile(
+                  leading: UiHelper.customImages(imgurl: "Oval (8).png"),
+                  title: const Text(
+                    "JAjatrfne mentioned you in a comment: @jacob_w Dude..🤞",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+                  subtitle: const Text(
+                    "3d ago",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 10,
+                    ),
+                  ),
+                  trailing: UiHelper.customImages(imgurl: "Rectangle (2).png"),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 2,),
+          Container(
+            height: 70,
+            width: double.infinity,
+            color: Colors.black,
+            child: ListTile(
+              leading: UiHelper.customImages(imgurl: "Oval (1).png"),
+              title: const Text(
+                "martini_rond started following you.",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 10,
+                ),
+              ),
+              subtitle: const Text(
+                "4d ago",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 10,
+                ),
+              ),
+              trailing: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black, // Background color
+                foregroundColor: Colors.white, // Text color
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 1),
+                textStyle: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: BorderSide(width: .5,color: Colors.yellow)
+                  // Rounded corners
+                ),
+              ),
+                child: const Text("Message"),)
+            ),
+          ),
+          Container(
+            height: 70,
+            width: double.infinity,
+            color: Colors.black,
+            child: ListTile(
+                leading: UiHelper.customImages(imgurl: "Oval (2).png"),
+                title: const Text(
+                  "martini_rond started following you.",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 10,
+                  ),
+                ),
+                subtitle: const Text(
+                  "5d ago",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 10,
+                  ),
+                ),
+                trailing: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Background color
+                  foregroundColor: Colors.white, // Text color
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 1),
+                  textStyle: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: .5,color: Colors.grey.shade300)
+                    // Rounded corners
+                  ),
+                ),
+                  child: const Text("Follow"),)
+            ),
+          )
         ],
       ),
     );
